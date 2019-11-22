@@ -47,11 +47,14 @@ plugins=(git
          osx
          python
          composer
+         kubectl
          gitfast
          golang
          history-substring-search
          terraform
          virtualenv
+         you-should-use
+         colored-man-pages
          zsh-autosuggestions
          zsh-completions
          zsh-syntax-highlighting)
