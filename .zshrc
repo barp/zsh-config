@@ -20,6 +20,11 @@ POWERLEVEL9K_SUDO_ICON=$'\uF09C' # 
 POWERLEVEL9K_TIME_FORMAT="%D{%H:%M}"
 POWERLEVEL9K_VCS_GIT_GITHUB_ICON='\uF408 '
 
+# Command Execution
+POWERLEVEL9K_COMMAND_EXECUTION_TIME_BACKGROUND='clear'
+POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND='white'
+
+# Dir
 POWERLEVEL9K_DIR_HOME_FOREGROUND='white'
 POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND='white'
 POWERLEVEL9K_DIR_DEFAULT_FOREGROUND='white'
@@ -41,11 +46,14 @@ plugins=(git
          osx
          python
          composer
+         kubectl
          gitfast
          golang
          history-substring-search
          terraform
          virtualenv
+         you-should-use
+         colored-man-pages
          zsh-autosuggestions
          zsh-completions
          zsh-syntax-highlighting)
