@@ -76,7 +76,6 @@ Plug 'tomtom/tlib_vim'
 Plug 'rdolgushin/snipMate-acp'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'junegunn/fzf.vim'
 Plug 'vim-scripts/a.vim'
 Plug 'ervandew/supertab'
@@ -122,7 +121,7 @@ if !empty($INSTALL_VIMRC_PLUGINS)
     let g:coc_disable_startup_warning = 1
     if $INSTALL_VIMRC_PLUGINS != 'post'
         exec ":PlugInstall --sync"
-        silent !INSTALL_VIMRC_PLUGINS=post vim +'CocInstall -sync coc-json coc-clangd coc-sh coc-python coc-vimlsp' +qa
+        silent !INSTALL_VIMRC_PLUGINS=post vim +'CocInstall -sync coc-json coc-clangd coc-sh coc-python coc-vimlsp coc-go' +qa
         exec ":q"
     endif
 endif
