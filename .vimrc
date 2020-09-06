@@ -221,8 +221,11 @@ nnoremap <silent> <leader>zf :call ZGenerateFlags()<CR>
 nnoremap <silent> <leader>zk :call ZGenerateOpengrok()<CR>
 
 " Terminal
-nnoremap <silent> <leader>zb :below terminal ++rows=10<CR>
-nnoremap <silent> <leader>zB :below terminal ++rows=20<CR>
+if has("nvim")
+    :tnoremap <Esc> <C-\><C-n>
+    nnoremap <leader>zb :below 10sp term://$SHELL<CR>i
+    nnoremap <leader>zB :below 20sp term://$SHELL<CR>i
+endif
 
 " Vim-better-whitespace
 nnoremap <silent> <leader>zw :StripWhitespace<CR>
