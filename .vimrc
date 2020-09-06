@@ -2,7 +2,7 @@
 let mapleader = ","
 
 function! InstallVimrc()
-    silent !DEBIAN_FRONTEND=noninteractive apt install -y curl silversearcher-ag exuberant-ctags cscope global git clang-tools-8 make autoconf automake pkg-config libc++-8-dev openjdk-8-jre python3 python3-pip
+    silent !DEBIAN_FRONTEND=noninteractive apt install -y curl silversearcher-ag exuberant-ctags cscope global git clang-tools-8 make autoconf automake pkg-config libc++-8-dev openjdk-8-jre python3 python3-pip npm
     silent !update-alternatives --install /usr/bin/clangd clangd /usr/bin/clangd-8 800
     silent exec "!curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -"
     silent !DEBIAN_FRONTEND=noninteractive apt install -y nodejs
