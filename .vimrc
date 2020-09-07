@@ -160,6 +160,8 @@ noremap <F2> <C-w><C-w>
 noremap <F6> :bp<CR>
 noremap <F7> :bn<CR>
 set noerrorbells visualbell t_vb=
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 " Gui colors
 if has('termguicolors')
