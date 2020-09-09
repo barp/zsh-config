@@ -138,6 +138,8 @@ set shellslash
 set autoindent
 autocmd filetype cpp setlocal cindent
 autocmd filetype c setlocal cindent
+command! -nargs=0 OR :call CocAction('runCommand', 'editor.action.organizeImport')
+autocmd BufWritePre *.go :OR
 set cinoptions=g0N-s
 set backspace=indent,eol,start
 set ruler
@@ -928,3 +930,4 @@ function! ZToggleMouse()
     endif
 endfunction
 
+autocmd FileType go autocmd BufWritePre <buffer> :call CocAction('format')
