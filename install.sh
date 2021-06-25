@@ -14,11 +14,8 @@ case "${unameOut}" in
     *)          machine="UNKNOWN:${unameOut}"
 esac
 
-if [ "$machine" -eq "Mac" ]; then
-    brew install ranger
-else
-    sudo apt-get install ranger
-fi
+pip3 install ranger-fm pynvim
+
 
 mkdir -p ~/.config/ranger/
 
