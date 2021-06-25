@@ -66,6 +66,7 @@ endif
 let g:lsp_choice = 'coc'
 
 call plug#begin()
+Plug 'kevinhwang91/rnvimr'
 Plug 'puremourning/vimspector'
 Plug 'wesleyche/SrcExpl'
 Plug 'vim-scripts/taglist.vim'
@@ -918,6 +919,11 @@ function! ZGenerateCompileCommandsJson()
     exec ":AsyncRun compiledb " . compile_command
 endfunction
 nnoremap <silent> <leader>zj :call ZGenerateCompileCommandsJson()<CR>
+tnoremap <silent> <M-i> <C-\><C-n>:RnvimrResize<CR>
+nnoremap <silent> <M-o> :RnvimrToggle<CR>
+tnoremap <silent> <M-o> <C-\><C-n>:RnvimrToggle<CR>
+inoremap jj <Esc>
+vnoremap jj <Esc>
 
 " Toggle mouse
 function! ZToggleMouse()
